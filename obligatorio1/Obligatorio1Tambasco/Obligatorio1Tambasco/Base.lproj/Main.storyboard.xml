@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oat-HK-qcX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Obligatorio1Tambasco" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MLp-O1-6JO">
+                                <rect key="frame" x="15" y="117" width="345" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mB7-Sg-bzm"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tN6-if-2Q3">
+                                    <size key="itemSize" width="344" height="126"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aeo-8h-9Th">
+                                        <rect key="frame" x="0.0" y="1" width="344" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-kJ-abf">
+                                                    <rect key="frame" x="15" y="7" width="316" height="110"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6ua-kJ-abf" secondAttribute="bottom" id="5aL-hG-ZEG"/>
+                                            <constraint firstItem="6ua-kJ-abf" firstAttribute="top" secondItem="aeo-8h-9Th" secondAttribute="top" id="ewz-qW-Otp"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ua-kJ-abf" secondAttribute="trailing" id="r7c-rK-0Ud"/>
+                                            <constraint firstItem="6ua-kJ-abf" firstAttribute="leading" secondItem="aeo-8h-9Th" secondAttribute="leading" id="x3y-Vc-YSs"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ikp-lw-qZF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6Xv-R5-L4h"/>
+                                </connections>
+                            </collectionView>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Ixn-NT-wzq">
+                                <rect key="frame" x="0.0" y="337.5" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="k8y-cb-ZwK">
+                                <rect key="frame" x="168" y="276.5" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MLp-O1-6JO" secondAttribute="trailing" constant="15" id="DT9-wI-Lqz"/>
+                            <constraint firstItem="Ixn-NT-wzq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ejy-Lg-Aea"/>
+                            <constraint firstItem="Ixn-NT-wzq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LRu-c6-vF9"/>
+                            <constraint firstItem="MLp-O1-6JO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ZBc-9x-4Fe"/>
+                            <constraint firstItem="Ixn-NT-wzq" firstAttribute="top" secondItem="k8y-cb-ZwK" secondAttribute="bottom" constant="24" id="a9j-p1-0UN"/>
+                            <constraint firstItem="MLp-O1-6JO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="iN3-Je-eGR"/>
+                            <constraint firstItem="k8y-cb-ZwK" firstAttribute="centerX" secondItem="MLp-O1-6JO" secondAttribute="centerX" id="kVj-BM-3p9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ixn-NT-wzq" secondAttribute="trailing" id="zZL-aF-8cb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ucH-2H-gBR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wf0-aD-V2S">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="19C-35-CGb">
+                                <rect key="frame" x="281" y="11" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon-cart"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pageView" destination="k8y-cb-ZwK" id="kex-vF-bKt"/>
+                        <outlet property="slideCollectionView" destination="MLp-O1-6JO" id="ibl-ei-Z0l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ge3-c9-5hW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oat-HK-qcX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LUG-id-m0c">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GWE-DW-RfQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8SK-gN-20q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-cart" width="24" height="21"/>
+    </resources>
+</document>
